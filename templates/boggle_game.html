@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Game Page{% endblock %}
+{% block content %} 
+
+<div id="navbar">
+  <a class="btn btn-outline-secondary" href='/game-load'>Restart</a>    
+  <a class="btn btn-outline-secondary" href='/'>Instructions</a>    
+</div>
+
+<div id="game">
+    <table id="board">
+        <tbody>
+            {% for y in range(5) %}
+                <tr>
+                {% for x in range(5) %}
+                    <td>{{board[y][x]}}</td>
+                {% endfor %}
+                </tr>   
+            {% endfor %} 
+        </tbody>        
+    </table>
+</div>
+
+<form id="guess" method="POST">
+    <input id="guess-input" type="text" placeholder="Enter your word here..." name="guess" required autofocus>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+<div id="statistic">
+    <h4 class="h4">Game Statistics:</h4>
+    <p>Highest Score: <b> {{ highestscore }}</b> </p>
+    <p>Game #: <b>{{ playsnum }}</b></p>
+    <p>Current score: <b class="score">0</b></p>
+    <p>Time left: <b class="timer"></b> sec</p>
+</div>
+
+    <p class="feedback-messages"></p>
+    <ul class="words"></ul>  
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+td, th {
+    width: 50px;
+    height: 50px;
+    border: solid 2px  #60a5cc;
+    background-color:  #316888;
+    color:white;
+    text-align: center;
+    font-size: large;
+  }
+
+#navbar, #statistic, #guess {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#statistic {
+    background-color: #d3e6f3;
+    border: solid 2px #316888;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#instructions {
+    background-color: #d3e6f3;
+    border: solid 2px #316888;
+    width: 540px;
+    border-radius: 5px;
+    padding: 1rem;
+}
